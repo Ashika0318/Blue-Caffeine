@@ -1,0 +1,157 @@
+.home-container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 35px auto;
+  font-family: Arial, sans-serif;
+}
+
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.home-header h2 {
+  color: #222;
+}
+
+.add-chat-btn {
+  background-color: #04182e;
+  color: #fff;
+  border: none;
+  padding: 6px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9rem;
+}
+
+.add-chat-btn .plus-icon {
+  font-size: 1.2rem;
+}
+
+.add-chat-btn:hover {
+  background-color: #0f2741;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  margin: 15px 0;
+}
+.welcome-text{
+  padding: 20px 0px;
+}
+.welcome-text h3 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+  padding-bottom: 10px;
+
+}
+
+.welcome-text p {
+  margin: 0 0 20px 0;
+  color: #555;
+}
+
+/* Cards container */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.home-card {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.home-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Icon Styling */
+.card-icon {
+  font-size: 1.8rem;
+    color: #3184bd;
+    background-color: #edf6ff;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: fit-content;
+}
+
+.home-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.home-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.chat-btn {
+  background-color: #04182e;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: auto;
+  width: 100%;
+  text-align: center;
+}
+
+.chat-btn:hover {
+  background-color: #0e2946;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .home-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .home-header {
+    flex-direction: row;            /* Keep items in one row */
+    justify-content: space-between; /* Spread h2 and button apart */
+    width: 100%;
+  }
+
+  .home-header h2 {
+    font-size: 1.2rem;              /* Slightly smaller text */
+  }
+
+  .add-chat-btn {
+    padding: 6px 10px;              /* Adjust padding for small screen */
+    font-size: 0.8rem;
+    flex-shrink: 0;                 /* Prevent button from shrinking or wrapping */
+    white-space: nowrap;            /* Keep text on one line */
+  }
+}
+ 
